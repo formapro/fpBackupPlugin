@@ -51,9 +51,9 @@ class fpCommandBackupDb extends fpExecCommandBase
     $stdout = '>> log/fp:backup.log';
     
     
-    $mysqlDumpCmd = "mysqldump -u{$dsn->user()} ";
-    if ($dsn->password()) $mysqlDumpCmd .= "-p{$dsn->password()} ";
-    $mysqlDumpCmd .= "-h{$dsn->host()} {$dsn->database()} {$stderr}";
+//    $mysqlDumpCmd = "mysqldump -u{$dsn->user()} ";
+//    if ($dsn->password()) $mysqlDumpCmd .= "-p{$dsn->password()} ";
+//    $mysqlDumpCmd .= "-h{$dsn->host()} {$dsn->database()} {$stderr}";
     
     $this->_doExecBackground(
       "mysqldump -u{$dsn->user()} -p{$dsn->password()} -h{$dsn->host()} {$dsn->database()} {$stderr} | " .
